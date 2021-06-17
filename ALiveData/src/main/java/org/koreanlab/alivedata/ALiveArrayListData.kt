@@ -11,6 +11,17 @@ class ALiveArrayListData<T> : MutableLiveData<ArrayList<T>>() {
         return this
     }
 
+    fun keep(): ALiveArrayListData<T>{
+        data = this.value
+        this.value = null
+        return this
+    }
+
+    fun remove(item: T): ALiveArrayListData<T> {
+        data?.remove(item)
+        return this
+    }
+
     fun add(item: T): ALiveArrayListData<T> {
         data?.add(item)
         return this
@@ -23,11 +34,6 @@ class ALiveArrayListData<T> : MutableLiveData<ArrayList<T>>() {
 
     fun clear(): ALiveArrayListData<T> {
         data?.clear()
-        return this
-    }
-
-    fun remove(item: T): ALiveArrayListData<T> {
-        data?.remove(item)
         return this
     }
 
