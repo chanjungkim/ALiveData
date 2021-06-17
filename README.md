@@ -25,7 +25,7 @@ Step 2. Add the dependency
   
 ### Usage
 
-```=kotlin
+```=java
         // This is valid for the first time
         aliveArrayListData
             .add("ADD 1\n")
@@ -51,7 +51,7 @@ Step 2. Add the dependency
             .update()
 ```
 
-```=kotlin
+```=java
 	val aliveArrayListData = ALiveArrayListData<String>()
     
 	// Observe
