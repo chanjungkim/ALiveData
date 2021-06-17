@@ -4,31 +4,34 @@ import androidx.lifecycle.MutableLiveData
 
 
 class ALiveArrayListData<T> : MutableLiveData<ArrayList<T>>() {
-    init {
-        this.value = ArrayList()
+    var data: ArrayList<T>? = null
+
+    fun set(data: ArrayList<T>): ALiveArrayListData<T>{
+        this.data = data
+        return this
     }
 
     fun add(item: T): ALiveArrayListData<T> {
-        this.value?.add(item)
+        data?.add(item)
         return this
     }
 
     fun addAll(list: List<T>): ALiveArrayListData<T> {
-        this.value?.addAll(list)
+        data?.addAll(list)
         return this
     }
 
     fun clear(): ALiveArrayListData<T> {
-        this.value?.clear()
+        data?.clear()
         return this
     }
 
     fun remove(item: T): ALiveArrayListData<T> {
-        this.value?.remove(item)
+        data?.remove(item)
         return this
     }
 
     fun update(){
-        this.value = this.value
+        this.value = data
     }
 }
