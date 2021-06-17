@@ -4,10 +4,9 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.widget.TextView
-import org.koreanlab.
 
 class MainActivity : AppCompatActivity() {
-    val aliveArrayListData = ALiveArrayList<String>()
+//    val aliveArrayListData = ALiveArrayList<String>()
 
     var tvPrint: TextView? = null
 
