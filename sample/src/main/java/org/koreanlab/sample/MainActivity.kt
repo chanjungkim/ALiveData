@@ -9,6 +9,7 @@ import org.koreanlab.alivedata.ALiveArrayListData
 
 class MainActivity : AppCompatActivity() {
     val aliveArrayListData = ALiveArrayListData<String>()
+
     val txtList = arrayListOf<String>("말", "고양이", "늑대", "염소")
     var tvPrint: TextView? = null
 
@@ -21,8 +22,8 @@ class MainActivity : AppCompatActivity() {
             .update()
 
         aliveArrayListData
-            .add("\nREMOVE 3:${txtList[1]}")
-            .add("\nREMOVE 4:${txtList[2]}")
+            .add("\nADD 3:${txtList[1]}")
+            .add("\nADD 4:${txtList[2]}")
 
         runTest()
     }
@@ -30,7 +31,6 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
-
 
         init()
     }
@@ -40,11 +40,11 @@ class MainActivity : AppCompatActivity() {
 
         // Observe
         aliveArrayListData.observe(this, Observer {
-            tvPrint!!.text = "ALiveData 테스트 ${++cnt}\n ${it.toString()}"
+            tvPrint!!.text = "ALiveData Test ${++cnt}\n ${it.toString()}"
         })
 
         // init data
-        aliveArrayListData.value = txtList
+        aliveArrayListData.set(txtList)
 
         runTest()
     }

@@ -4,7 +4,7 @@ import androidx.lifecycle.MutableLiveData
 
 
 class ALiveArrayListData<T> : MutableLiveData<ArrayList<T>>() {
-    var data: ArrayList<T>? = null
+    private var data: ArrayList<T>? = null
 
     fun set(data: ArrayList<T>): ALiveArrayListData<T>{
         this.data = data
@@ -33,5 +33,6 @@ class ALiveArrayListData<T> : MutableLiveData<ArrayList<T>>() {
 
     fun update(){
         this.value = data
+        data = null
     }
 }
