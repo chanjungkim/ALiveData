@@ -58,6 +58,8 @@ Step 2. Add the dependency
 	})
 ```
 
+# License
+
 MIT License
 
 Copyright (c) 2021 evan
