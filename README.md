@@ -1,5 +1,7 @@
 # ALiveData
 
+[![](https://jitpack.io/v/chanjungkim/ALiveData.svg)](https://jitpack.io/#chanjungkim/ALiveData)
+
 ### How to
 
 To get a Git project into your build:
