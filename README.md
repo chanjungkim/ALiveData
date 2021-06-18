@@ -23,7 +23,7 @@ Step 2. Add the dependency
 ### Usage
 
 ```kotlin
-	val aliveArrayListData = ALiveArrayListData<String>()
+	val aliveArrayListData = ArrayListMutableLiveData<String>()
     
 	// Observe
 	aliveArrayListData.observe(this, Observer {
