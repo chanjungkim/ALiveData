@@ -23,6 +23,16 @@ Step 2. Add the dependency
 ### Usage
 
 ```kotlin
+	val aliveArrayListData = ALiveArrayListData<String>()
+    
+	// Observe
+	aliveArrayListData.observe(this, Observer {
+	    tvPrint!!.text = "ALiveData Test ${++cnt}\n ${it.toString()}"
+	    runTest()
+	})
+```
+
+```kotlin
         // This is valid for the first time
         aliveArrayListData
             .add("ADD 1\n")
@@ -46,16 +56,6 @@ Step 2. Add the dependency
             .add("ADD 5")
             .add("ADD 6")
             .update()
-```
-
-```kotlin
-	val aliveArrayListData = ALiveArrayListData<String>()
-    
-	// Observe
-	aliveArrayListData.observe(this, Observer {
-	    tvPrint!!.text = "ALiveData Test ${++cnt}\n ${it.toString()}"
-	    runTest()
-	})
 ```
 
 # License
