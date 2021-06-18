@@ -1,6 +1,6 @@
 # ALiveData
 
-[![](https://jitpack.io/v/chanjungkim/ALiveData.svg)](https://jitpack.io/#chanjungkim/ALiveData)
+[![](https://jitpack.io/v/chanjungkim/AMutableLiveData.svg)](https://jitpack.io/#chanjungkim/AMutableLiveData)
 
 ### Setup
 
@@ -17,7 +17,7 @@ Add it in your root build.gradle at the end of repositories:
 Step 2. Add the dependency
 
 	dependencies {
-	        implementation 'com.github.chanjungkim:ALiveData:Tag'
+	        implementation 'com.github.chanjungkim:AMutableLiveData:Tag'
 	}
   
 ### Usage
