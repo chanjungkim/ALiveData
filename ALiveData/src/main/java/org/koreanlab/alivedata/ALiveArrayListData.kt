@@ -11,6 +11,8 @@ class ALiveArrayListData<T> : MutableLiveData<ArrayList<T>>() {
         return this
     }
 
+    fun get() = this.value
+
     fun keep(): ALiveArrayListData<T>{
         data = this.value
         this.value = null
