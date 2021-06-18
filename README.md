@@ -62,7 +62,7 @@ Step 2. Add the dependency
 
 MIT License
 
-Copyright (c) 2021 evan
+Copyright (c) 2021 Chanjung Kim
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal
