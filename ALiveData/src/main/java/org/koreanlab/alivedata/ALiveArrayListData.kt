@@ -2,7 +2,6 @@ package org.koreanlab.alivedata
 
 import androidx.lifecycle.MutableLiveData
 
-
 class ALiveArrayListData<T> : MutableLiveData<ArrayList<T>>() {
     private var data: ArrayList<T>? = null
 
@@ -10,6 +9,8 @@ class ALiveArrayListData<T> : MutableLiveData<ArrayList<T>>() {
         this.data = data
         return this
     }
+
+    fun get() = this.value
 
     fun keep(): ALiveArrayListData<T>{
         data = this.value
