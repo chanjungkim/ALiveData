@@ -37,7 +37,7 @@ class ALiveListData<T> : MutableLiveData<List<T>>() {
     fun addItems(vararg items: T): ALiveListData<T>{
         this.value = this.value!!.toMutableList().apply {
             items.forEach {
-                plus(it)
+                add(it)
             }
         }.toList()
         return this
@@ -46,16 +46,14 @@ class ALiveListData<T> : MutableLiveData<List<T>>() {
     fun addAll(list: List<T>): ALiveListData<T> {
         this.value = this.value!!.toMutableList().apply {
             list.forEach {
-                plus(it)
+                add(it)
             }
         }.toList()
         return this
     }
 
     fun clear(): ALiveListData<T> {
-        this.value = this.value!!.toMutableList().apply {
-            clear()
-        }
+        this.value = emptyList()
         return this
     }
 
