@@ -3,7 +3,7 @@ package org.koreanlab.alivedata
 import androidx.lifecycle.MutableLiveData
 
 
-class ALiveData<T> : MutableLiveData<T>() {
+class AMutableLiveData<T> : MutableLiveData<T>() {
     private var data: T? = null
 
     fun set(data: T){
